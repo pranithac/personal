@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script  src="C:/Users/pranitha.chittoju/Desktop/pranitha/angular/js/angular.min.js"></script>
+<script   src="C:/Users/pranitha.chittoju/Desktop/pranitha/angular/js/sampleapp.js"></script>
+<script  src="C:/Users/pranitha.chittoju/Desktop/pranitha/angular/js/sampledatacontroller.js"></script>
+
+
+</head>
+
+<body>
+
+<div ng-app="sampleapp" ng-controller="sampledatacontroller" ng-init="age=10;count=4;company='trianz'">
+<w3-test-directive></w3-test-directive>
+<div class="w3-test-directive"></div>
+<ul>
+<li ng-repeat="x in empnames">
+emp names:: {{x}}
+</li>
+</ul>
+
+<ul>
+
+<li ng-repeat="obj in arrayofobjects">
+arrayofobjects:: 
+fname::{{obj.empf}}
+lname::{{obj.empl}}
+</li>
+</ul>
+<div ng-repeat="x in empnames">
+in div:{{x}}
+</div>
+<span ng-repeat="x in empnames">
+in span:{{x}}
+
+</span>
+ 	<p>enter firstname: <input type="text" ng-model="firstname"></p>
+	<p>enter lastname: <input type="text" ng-model="lastname"></p>
+	fullname:: {{getfullname()}}
+	
+<h1 ng-click="changefname()">{{firstname}}</h1>
+
+ 	firstname:<p ng-bind="firstname"></p>
+	lastname:<p ng-bind="lastname"></p>
+	age:<p ng-bind="age"></p>
+	agecount:<p ng-bind="age*count"></p>
+	company:<p ng-bind="company"></p>
+	<br><br><br>
+	firstname:<span>{{firstname}}</span>
+	lastname:<span>{{lastname}}</span>
+	age:<span>{{age}}</span><br>
+	agecount<p>{{age*count}}</p>
+	company<p>{{company}}</p>
+	empfname : {{empobject.empfname}}
+	emplname : {{empobject.emplname}}
+	empnums: {{empnums[1]}}
+	sum: {{8+9}}
+	
+</div>
+<p>The scope of the controller's favorite color:</p>
+
+
+</body>
+
+</html>
+
+
+
